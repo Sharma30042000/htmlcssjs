@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>jsproject</title>
+<style type="text/css">
+.box   { 
+         
+       
+         margin:200px auto;
+         width:1000px; 
+           height:1500px;		 
+		
+         background-color:gray;
+		 border:2px black solid; 
+      		border-radius:40px; 
+		   }
+.head    { 
+             height:170px;
+			 width:100%;
+	background-color:yellow;
+             border-top-left-radius:40px;
+			  border-top-right-radius:40px;
+			 margin:0;
+			 float:left;
+			
+            }
+.heading    {
+                 font-size:600%;
+				 text-align:center;
+				 color:black;
+				 position:relative;
+				 bottom:150px;
+				 
+				
+
+
+                }
+
+.much      { 
+                 font-size:350%;
+				  position:relative;
+				 bottom:150px;
+				 color:yellow; 
+				 left:35px;
+				 }
+
+.input       {
+                 font-size:100%; 
+				  margin-left:20px;
+				  border-color:black;
+				  
+				  
+				  }
+
+.input2       {
+                 font-size:500%; 
+				  margin-left:100px;
+				  border-color:black;
+                     padding-bottom:80px;
+				  position:relative;
+				  bottom:150px;
+				  width:80%;
+				  }
+
+.input3       {
+                 font-size:350%;
+				  position:relative;
+				 bottom:150px;
+	             border-color:black;
+				 left:110px;;
+				 
+				  }
+
+.cal            {   
+                      width:400px;
+					  height:100px;
+					  
+					  background-color:yellow;
+					  border-radius:20px;
+					  position:relative;
+					  left:270px;
+					  bottom:60px;
+					  text-align:center;
+					  font-size:80px;
+					  border:1px black solid;
+					  }
+
+body            {
+                     background:url("restro.jpg") no-repeat center fixed;
+                     background-size:cover;					 
+					 }
+
+
+button:hover  { background-color:red;
+          
+			}
+button:active   {background-color:blue;
+                          }
+
+
+
+</style>
+</head>
+<body >
+
+<div class="box">
+<p class="head">
+<h1 class="heading">calculator</h1>
+<p>
+<p class="much">How much was your bill ?</p>
+<p class="much">RS<input id="amnt" class="input" type="text" placeholder="Total Amount">         </p>
+<p class="much">How was your service ?</p>
+<select id="slct" class="input2"  placeholder="--choose an optin--">
+<option selected>--choose a option--</option>
+<option value="0.05" >5%-it is ok</option>
+<option value="0.10">10%-good</option>
+<option value="0.15">15%-very good</option>
+</select>
+<p class="much">How many people sharing the bill ?</p>
+<input id="ppl" class="input3" type="text" placeholder="No.of People">
+<button  id="btn" class="cal">calculate</button>
+
+</div>
+
+
+
+<script type="text/javascript">
+document.getElementById("btn").onclick=function()
+{
+var amnt="";
+var ppl="";
+var avg;
+var ans;
+ppl=document.getElementById("ppl").value;
+amnt=document.getElementById("amnt").value;
+if(document.getElementById("slct").value=="0.05") 
+{
+ans=(0.05*amnt)/ppl;
+alert(ans);
+
+
+}
+else
+if(document.getElementById("slct").value=="0.10") 
+{
+ans=(0.10*amnt)/ppl;
+alert(ans);
+
+
+}
+else
+if(document.getElementById("slct").value=="0.15") 
+{
+ans=(0.15*amnt)/ppl;
+alert(ans);
+
+
+}
+
+
+
+
+
+
+}
+
+
+</script>
+
+</body>
+</html>
